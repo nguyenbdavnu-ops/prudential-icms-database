@@ -1,27 +1,48 @@
-# prudential-icms-database
+# Improving Operational Efficiency with Database Applications – Prudential Vietnam
 
-Project skeleton for the Prudential ICMS database.
+This repository contains the Insurance Contract Management System (ICMS) project designed to streamline insurance operations for Prudential Vietnam.
 
-Repository layout
-```
+## Project overview
+
+- Designed and implemented a normalized (3NF) Insurance Contract Management System to streamline contract, claim, and payment data pipelines.
+- Developed an ERD and relational schema for 11 interconnected entities.
+- Wrote and optimized 11 SQL business queries using `SELECT`, `JOIN`, `GROUP BY`, and subqueries to extract KPI performance and revenue insights.
+- Identified 22% data duplication issues and proposed data-driven solutions to reduce claim processing time by up to 80%, improving operational efficiency.
+
+## Repository structure
+
+```text
 prudential-icms-database/
 │
-├── README.md              ← Quan trọng nhất!
+├── README.md              ← Project summary and structure
 ├── schema/
-│   └── create_tables.sql  ← Toàn bộ CREATE TABLE
+│   └── create_tables.sql  ← Full CREATE TABLE DDL
 ├── data/
-│   └── insert_data.sql    ← INSERT VALUES
+│   └── insert_data.sql    ← INSERT statements for sample data
 ├── queries/
-│   └── business_queries.sql ← 11 business questions
+│   └── business_queries.sql ← 11 business analysis SQL queries
 ├── docs/
-│   ├── ERD.png            ← Chụp/export ảnh ERD
-│   └── relation_schema.png
+│   ├── ERD.png            ← Entity-relationship diagram
+│   └── relation_schema.png ← Relation schema diagram placeholder
 ```
 
-How to use
-- Put all CREATE TABLE statements into `schema/create_tables.sql`.
-- Put all INSERT statements (or COPY) into `data/insert_data.sql`.
-- Add the 11 business query SQL statements to `queries/business_queries.sql`.
-- Replace the placeholder images in `docs/` with exported ERD and relation schema images.
+## Tech Stack
 
-If you have a Word document with schema or data, copy the SQL parts into the files above. 
+- **Database**: SQL (MySQL / BigQuery)
+- **Concepts**: Entity-Relationship Diagram, 3NF Normalization, Relational Schema
+- **Tools**: draw.io (ERD design), VS Code
+
+## Key Results
+
+| Metric | Before ICMS | After ICMS |
+|--------|------------|------------|
+| Data duplication | 22% | ~0% |
+| Claim processing time | 72 hours | ~14 hours (↓80%) |
+| Data accuracy | 85% | 99%+ |
+
+## How to use
+
+1. Run `schema/create_tables.sql` to create the database schema.
+2. Load sample data from `data/insert_data.sql`.
+3. Execute the queries in `queries/business_queries.sql` to produce business insights.
+4. Replace `docs/ERD.png` and `docs/relation_schema.png` with exported diagrams from your modeling tool.
